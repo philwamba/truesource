@@ -7,7 +7,7 @@
         "build:web": "pnpm --filter @truesource/web build",
         "typecheck:web": "pnpm --filter @truesource/web typecheck",
         "lint": "echo \"(add ESLint later)\"",
-        "test:api": "pytest -q apps/api",
+        "test:api": "PYTHONPATH=apps/api python -m pytest -q apps/api",
         "ci": "pnpm -w install && pnpm build:web && pnpm test:api"
     },
     "devDependencies": {
